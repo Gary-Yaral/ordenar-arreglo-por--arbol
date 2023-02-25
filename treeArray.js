@@ -117,6 +117,7 @@ class Tree {
   getArray(orderType) {
     this.data = []
     this.createArray(this, this.data,orderType)
+    if(this.data.length === 1 && this.data[0] === null) this.data = []
     return this.data
   }
 }
