@@ -121,7 +121,7 @@ class Tree {
   }
 }
 
-function orderArray(array, orderType, sign, callback, repeated = false) {
+function orderArray(array, sign, callback, repeated = false) {
   let mainTree = new Tree(null) 
   if(array.length > 0) {
     mainTree = new Tree(array[0]) 
