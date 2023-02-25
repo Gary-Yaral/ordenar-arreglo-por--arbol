@@ -13,10 +13,7 @@ Con esta pequeña libreria podrás organizar un arreglo según los parametros qu
  ]
  
  /* Usamos la función orderArray la cual devuelve un arbol binario */
- const tree = orderArray(data, "normal", (value, root) => [
-  value.name,
-  root.name
-])
+ const tree = orderArray(data, "normal", (value, root) => [value.name, root.name])
 
 /* Obtenemos el arreglo ordenado */
 const array = tree.getArray("inOrder")
@@ -38,20 +35,20 @@ En consola se debe mostrar los siguiente:
 
 ### Que parámetros recibe la función orderArray()
 * **PRIMERO:** Indica el array que se ordenará
-* **SEGUNDO:** Indica el tipo de ordanamiento del árbol, hay varios tipos, los cuales pueden ser ``` "normal" ``` y ``` "reverse" ```. Cuando asignamos ``` "normal" ``` el arbol se irá llenando siempre de izquierda a derecha y en caso de que sea "reverse" entonces se llenará de derecha a izquierda. Hay que tener en cuenta que el ordenamiento influye en el ordanamiento del array que generará el árbol. 
-* **TERCERO:** Se refiere a un función callback (el cual recibe dos parámetros) que retorne un arreglo con los valores a comparar, en caso de que el arreglo contenga objetos se debe retornar la propiedad a comparar. 
-* **CUARTO:** Este parametro es un booleano, dicho booleano servirá para indicar si se desea generar un arreglo con valores repetidos o no, por defecto este valor está en false, por lo que se si no desea eliminar los repetidos no es necesario pasarlo, pero si desea eliminarlos, entonces debe pasar un ``` true ```
+* **SEGUNDO:** Indica el tipo de ordanamiento del árbol, hay varios tipos, los cuales pueden ser ``` "normal" ``` y ``` "reverse" ```. Cuando asignamos ``` "normal" ``` el arbol se irá llenando siempre de izquierda a derecha y en caso de que sea "reverse" entonces se llenará de derecha a izquierda. Hay que tener en cuenta que el ordenamiento influye en el ordanamiento del array que generará el árbol ``` value.name ```. 
+* **TERCERO:** Se refiere a un función callback (el cual recibe dos parámetros) que retorne un arreglo con los valores a comparar, en caso de que el arreglo contenga objetos se debe retornar el value llamando a la propiedad a comparar. 
+* **CUARTO:** Este parametro es un booleano, dicho booleano servirá para indicar si se desea generar un arreglo con valores repetidos o no, por defecto este valor está en ``` false ```, por lo que se si no desea eliminar los repetidos no es necesario pasarlo, pero si desea eliminarlos, entonces debe pasar un ``` true ```
 
 
-***NOTA***: La parametros de la función callback son dos: el primero es ``` value ``` y el segundo es ``` root ```. El ``` value ``` es valor de la posición que se está recorriendo en el arreglo, mientras que el ``` root``` es la raíz del subarbol que se está recorriendo.
+***NOTA***: La parametros de la función callback son dos: el primero es ``` value ``` y el segundo es ``` root ```. El ``` value ``` es valor de la posición que se está recorriendo en el arreglo, mientras que el ``` root ``` es la raíz del subarbol que se está recorriendo.
 
 
 ### Valores que recibe el método getArray()
- "minmax": Ordenar de menor a mayor.
- "maxmin": Ordenar de mayor a menor.
- "inOrden": Aplica el ordenamiento inOrder de un árbol binario.
- "preOrder": Aplica el ordenamiento preOrder de un árbol binario.
- "postOrder": Aplica el ordenamiento postOrder de un árbol binario.
+ * **"minmax":** Ordenar de menor a mayor.
+ * **"maxmin":** Ordenar de mayor a menor.
+ * **"inOrden":** Aplica el ordenamiento inOrder de un árbol binario.
+ * **"preOrder":** Aplica el ordenamiento preOrder de un árbol binario.
+ * **"postOrder":** Aplica el ordenamiento postOrder de un árbol binario.
 
 Si deseas que el arreglo que se generará no tenga valores repetidos aquí tienes un ejemplo:
 
@@ -68,10 +65,7 @@ Si deseas que el arreglo que se generará no tenga valores repetidos aquí tiene
  ]
  
  /* Usamos la función orderArray el cual devuelve un arbol binario, pero esta vez pasamos el último parámetro en true */
- const tree = orderArray(data, "normal", (value, root) => [
-  value.name,
-  root.name
-], true)
+ const tree = orderArray(data, "normal", (value, root) => [value.name, root.name], true)
 
 /* Obtenemos el arreglo ordenado */
 const array = tree.getArray("inOrder")
