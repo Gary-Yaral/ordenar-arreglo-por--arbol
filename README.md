@@ -26,7 +26,6 @@ En consola se debe mostrar los siguiente:
 ```console
 [
   { name: 'Carlos' },
-  { name: 'Karen' },
   { name: 'Maria' },
   { name: 'Pedro' },
   { name: 'Rodrigo' }
@@ -53,6 +52,7 @@ En consola se debe mostrar los siguiente:
 Si deseas que el arreglo que se generará no tenga valores repetidos aquí tienes un ejemplo:
 
 ``` javascript
+
  const data = [
   {name: "Maria"},
   {name: "Pedro"},
