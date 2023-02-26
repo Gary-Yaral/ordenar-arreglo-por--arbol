@@ -78,6 +78,7 @@ En consola se debe mostrar los siguiente:
 ```console
  [
   { name: 'Carlos' },
+  { name: 'Karen' },
   { name: 'Maria' },
   { name: 'Pedro' },
   { name: 'Rodrigo' }
